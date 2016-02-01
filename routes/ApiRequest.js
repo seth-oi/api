@@ -11,8 +11,8 @@ router.get('/', function(req, res, next) {
   		access_token = JSON.parse(res123.body).access_token;
   		console.log(err);
   		console.log(JSON.parse(res123.body));
-		 res.render('index', { title: access_token });
-});
+		 res.send(access_token)
+	});
  	});
 
 module.exports = router;
