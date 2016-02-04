@@ -15,7 +15,8 @@ var availability = require('./routes/availability');
 var login = require('./routes/login');
 var register = require('./routes/register');
 var incompleteAppointment = require('./routes/incompleteAppointment');
-var CompleteBooking = require('./routes/completeBooking')
+var CompleteBooking = require('./routes/completeBooking');
+var getAppointments = require('./routes/getAppointments')
 var app = express();
 
 // view engine setup
@@ -47,6 +48,7 @@ app.use('/apiRequest/login', login);
 app.use('/apiRequest/register', register);
 app.use('/apiRequest/IncompleteBooking', incompleteAppointment);
 app.use('/apiRequest/CompleteBooking', CompleteBooking);
+app.use('/apiRequest/customer', getAppointments);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

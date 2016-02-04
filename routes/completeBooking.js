@@ -3,6 +3,7 @@ var router = express.Router();
 var request = require('request');
 /* GET home page. */
 router.post('/', function(req, res, next) {
+	console.log(req.body.AppointmentPayment);
 	var formData = {
 		"ItineraryTimeSlotList": req.body.ItineraryTimeSlotList,
     	"IncompleteAppointmentID": req.body.IncompleteAppointmentID,
@@ -12,6 +13,7 @@ router.post('/', function(req, res, next) {
         "access_token": req.body.access_token
 	};
 	
+
 	request.post({
 	    uri: 'https://apicurrent-app.booker.ninja/WebService4/json/CustomerService.svc/appointment/create',
 	    json: true,
