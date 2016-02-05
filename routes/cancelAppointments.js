@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request');
 /* GET home page. */
 router.post('/', function(req, res, next) {
-	console.log(req.body)
+
 	var formData = {
 		ID: req.body.ID,
 		access_token: req.body.access_token

@@ -18,6 +18,8 @@ var incompleteAppointment = require('./routes/incompleteAppointment');
 var CompleteBooking = require('./routes/completeBooking');
 var getAppointments = require('./routes/getAppointments');
 var cancelAppointments = require('./routes/cancelAppointments');
+var cardTypes = require('./routes/cardTypes');
+var geoLocation = require('./routes/geoLocation');
 var app = express();
 
 // view engine setup
@@ -51,7 +53,9 @@ app.use('/apiRequest/IncompleteBooking', incompleteAppointment);
 app.use('/apiRequest/CompleteBooking', CompleteBooking);
 app.use('/apiRequest/customer', getAppointments);
 app.use('/apiRequest/cancel', cancelAppointments);
-
+app.use('/apiRequest/cardTypes', cardTypes);
+app.use('/apiRequest/getCustomer', cardTypes);
+app.use('/apiRequest/geoLocations', geoLocation);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
