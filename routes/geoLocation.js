@@ -4,28 +4,7 @@ var request = require('request');
 /* GET home page. */
 router.post('/', function(req, res, next) {
   var formData = {
-    "AvailableTreatmentCategoryIDs": [
-        {
-          "Options_0": 2,
-          "ClassInstanceIDs_0": 2,
-          "ApplicableItemIDs_0": 1
-        }
-      ],
-      "BrandID": null,
-      "CountryID": 0,
-      "Distance": null,
-      "MaxResults": null,
-      "PageNumber": 1,
-      "PageSize": 5,
-      "SearchText": "",
-      "SortBy": [
-        {
-          "SortBy": null,
-          "SortDirection": 1
-        }
-      ],
-      "StateAbbr": "",
-      "UsePaging": false,
+      "BrandID": 443,
       "access_token": req.body.access_token
   };
   request.post({
@@ -39,7 +18,7 @@ router.post('/', function(req, res, next) {
       if(!err && body)
       {
         console.log(body);
-        res.send(body.Results);
+        res.send(body);
       }
       else
       {

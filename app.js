@@ -19,8 +19,12 @@ var CompleteBooking = require('./routes/completeBooking');
 var getAppointments = require('./routes/getAppointments');
 var cancelAppointments = require('./routes/cancelAppointments');
 var cardTypes = require('./routes/cardTypes');
+var giftTemplates = require('./routes/getgiftTemplates');
 var geoLocation = require('./routes/geoLocation');
+var createGiftCertificate = require('./routes/createGiftCertificate');
+var purchaseGiftCertificate = require('./routes/purchaseGiftCertificate');
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -54,8 +58,10 @@ app.use('/apiRequest/CompleteBooking', CompleteBooking);
 app.use('/apiRequest/customer', getAppointments);
 app.use('/apiRequest/cancel', cancelAppointments);
 app.use('/apiRequest/cardTypes', cardTypes);
-app.use('/apiRequest/getCustomer', cardTypes);
+app.use('/apiRequest/getGiftTemplates', giftTemplates);
 app.use('/apiRequest/geoLocations', geoLocation);
+app.use('/apiRequest/createGiftCertificate', createGiftCertificate);
+app.use('/apiRequest/purchaseGiftCertificate', purchaseGiftCertificate);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
