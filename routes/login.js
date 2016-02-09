@@ -9,8 +9,8 @@ router.post('/', function(req, res, next) {
 		"Email": req.body.Email,
 		"Password": req.body.Password,
 		"LocationID": req.body.LocationID,
-		"client_id": congif.Client.id,
-		"client_secret": congif.Client.secret
+		"client_id": config.Client.id,
+		"client_secret": config.Client.secret
 	};
 	request.post({
 	    uri: 'https://apicurrent-app.booker.ninja/WebService4/json/CustomerService.svc/customer/login',
