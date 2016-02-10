@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 var congif = require('../config');
-console.log(congif.Client);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	var access_token;
