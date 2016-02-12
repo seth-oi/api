@@ -4,7 +4,6 @@ var request = require('request');
 /* GET home page. */
 router.post('/', function(req, res, next) {
 	var access_token;
-	/* */
 	var formData = {
 		"ItineraryTimeSlot": {
 			"CurrentPackagePrice": {

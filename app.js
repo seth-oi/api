@@ -23,6 +23,8 @@ var giftTemplates = require('./routes/getgiftTemplates');
 var geoLocation = require('./routes/geoLocation');
 var createGiftCertificate = require('./routes/createGiftCertificate');
 var purchaseGiftCertificate = require('./routes/purchaseGiftCertificate');
+var facebook = require('./routes/facebook');
+var google = require('./routes/google');
 var app = express();
 
 
@@ -62,6 +64,8 @@ app.use('/apiRequest/getGiftTemplates', giftTemplates);
 app.use('/apiRequest/geoLocations', geoLocation);
 app.use('/apiRequest/createGiftCertificate', createGiftCertificate);
 app.use('/apiRequest/purchaseGiftCertificate', purchaseGiftCertificate);
+app.use('/apiRequest/facebook', facebook);
+app.use('/apiRequest/google', google);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
