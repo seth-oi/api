@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var config = require('../config');
 /* GET home page. */
 router.post('/', function(req, res, next) {
 	var access_token;
@@ -12,7 +13,7 @@ router.post('/', function(req, res, next) {
 		"Itineraries": req.body.Itineraries
 	};
 	request.post({
-	    uri: 'https://apicurrent-app.booker.ninja/WebService4/json/CustomerService.svc/availability/multiservice',
+	    uri: config.apiBaseUrl.URL + '/WebService4/json/CustomerService.svc/availability/multiservice',
 	    json: true,
 	    headers: {
 	        "content-type": "application/json",

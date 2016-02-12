@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var config = require('../config');
 /* GET home page. */
 router.post('/', function(req, res, next) {
 	var access_token;
@@ -15,7 +16,7 @@ router.post('/', function(req, res, next) {
 	};
 
 	request.post({
-	    uri: 'https://apicurrent-app.booker.ninja/WebService4/json/CustomerService.svc/customer/account',
+	    uri: config.apiBaseUrl.URL + '/WebService4/json/CustomerService.svc/customer/account',
 	    json: true,
 	    headers: {
 	        "content-type": "application/json",

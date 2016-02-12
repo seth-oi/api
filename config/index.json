@@ -8,5 +8,8 @@
 	},
 	"facebook":{
 		"id":"551803548322995"
+	},
+	"apiBaseUrl":{
+		"URL":"https://apicurrent-app.booker.ninja"
 	}
 }

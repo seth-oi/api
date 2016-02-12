@@ -9,7 +9,7 @@ router.post('/', function(req, res, next) {
 		access_token: req.body.access_token
 	};
 	request.put({
-	    uri: 'https://apicurrent-app.booker.ninja/WebService4/json/CustomerService.svc/appointment/cancel',
+	    uri: config.apiBaseUrl.URL + '/WebService4/json/CustomerService.svc/appointment/cancel',
 	    json: true,
 	    headers: {
 	        "content-type": "application/json",

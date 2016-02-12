@@ -13,7 +13,7 @@ router.post('/', function(req, res, next) {
 		"client_secret": config.Client.secret
 	};
 	request.post({
-	    uri: 'https://apicurrent-app.booker.ninja/WebService4/json/CustomerService.svc/customer/login',
+	    uri: config.apiBaseUrl.URL + '/WebService4/json/CustomerService.svc/customer/login',
 	    json: true,
 	    headers: {
 	        "content-type": "application/json",
