@@ -5,7 +5,7 @@ var config = require('../config');
 /* GET home page. */
 router.post('/', function(req, res, next) {
   var formData = {
-      "BrandID": 443,
+      "BrandID": 433,
       "access_token": req.body.access_token
   };
   request.post({
