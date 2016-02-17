@@ -12,6 +12,7 @@ router.post('/', function(req, res, next) {
 		"StartDateTime": req.body.StartDateTime,
 		"Itineraries": req.body.Itineraries
 	};
+	console.dir(formData);
 	request.post({
 	    uri: config.apiBaseUrl.URL + '/WebService4/json/CustomerService.svc/availability/multiservice',
 	    json: true,
