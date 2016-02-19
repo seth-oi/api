@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
   	}, function (err, res123, body) {
   		if(!err && body)
   		{
-  			access_token = JSON.parse(res123.body).access_token;
+  			access_token =  body ? JSON.parse(body).access_token : false;
   			res.send(access_token);
   		}
   		else
